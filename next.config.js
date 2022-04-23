@@ -2,10 +2,12 @@ const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 
 const nextConfig = {
 
-  i18n: {
+  //This config doesn't work with Nextjs SSG
+
+  /*i18n: {
     locales: ["en", "es"],
     defaultLocale: "en"
-  },
+  },*/
   
   reactStrictMode: true,
       
@@ -27,5 +29,5 @@ module.exports = (phase, { defaultConfig }) => {
 
   if (phase === PHASE_DEVELOPMENT_SERVER) { return nextConfig }
 
-  return { ...nextConfig, basePath: '/crypto-crea', assetPrefix: '/crypto-crea' }
+  return { ...nextConfig, basePath: '/', assetPrefix: '/' }
 }
