@@ -29,5 +29,5 @@ module.exports = (phase, { defaultConfig }) => {
 
   if (phase === PHASE_DEVELOPMENT_SERVER) { return nextConfig }
 
-  return { ...nextConfig, basePath: '/', assetPrefix: '/' }
+  return { ...nextConfig, basePath: '', assetPrefix: '' }
 }
